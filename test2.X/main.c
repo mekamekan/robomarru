@@ -46,13 +46,11 @@
 /*
                          Main application
  */
-
-int result, Interval;
-uint8_t State, Reverse;
-
-void TMR2_interrupt(void);
-
-
+int g_result;
+uint8_t g_reverse = 0;
+uint8_t g_state = 1;
+uint8_t g_interval;
+void interrupt_TMR2(void);
 void main(void)
 {
     // initialize the device
@@ -72,51 +70,49 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    TMR2_SetInterruptHandler(TMR2_interrupt);
-    TMR2_Start();
-    Interval = 100;
+    TMR2_SetInterruptHandler(interrupt_TMR2);
+    TMR2_StartTimer();
 
     while (1)
     {
-        // Add your application code
-        result = ADC_GetConversion(AN0);
-        if(result < 20){
-            result = 20;
-        }
-    }
-}
-
-void TMR2_interrupt(void){
-    
-    Interval--;
-    if(Interval == 0){
-        Interval = result / 20;
-        __delay_us(1);
-        switch(State){
-            case 0:
-                State++;
-                LATC = (Reverse) ? 0x0A : 0x05;
-                break;
-            case 1:
-                State++;
-                LATC = (Reverse) ? 0x09 : 0x09;
-                break;
-            case 2:
-                State++;
-                LATC = (Reverse) ? 0x05 : 0x0A;
-                break;
-            case 3:
-                State = 0;
-                LATC = (Reverse) ? 0x06 : 0x06;
-                break;
-            
-            default :
-                break; 
-        }
+        // Add your applicatLATC\ion code
+       g_result = ADC_GetConversion(AN0);
+       if(g_result < 20)    g_result = 20;
+       
+        
         
     }
-    
+}
+void interrupt_TMR2(void){
+    g_interval--;
+    if(g_interval == 0){
+        g_interval = g_result / 20;
+        
+        switch(g_state){
+            case 1:
+                g_state++;
+                LATC = 0x0A;
+                LATC = (g_reverse) ? 0x0A : 0x05;
+                break;
+            case 2:
+                g_state++;
+                LATC = 0x09;
+                LATC = (g_reverse) ? 0x09 : 0x09;
+                break;
+            case 3:
+                g_state++;
+                LATC = 0x05;
+                LATC = (g_reverse) ? 0x05 : 0x0A;
+                break;
+            case 4:
+                g_state = 1;
+                LATC = 0x06;
+                LATC = (g_reverse) ? 0x06 : 0x06;
+                break;
+            default:
+                break;
+        }
+    }
 }
 /**
  End of File

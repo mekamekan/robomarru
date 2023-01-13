@@ -19464,9 +19464,9 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 78 "mcc_generated_files/pin_manager.h"
+# 184 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 90 "mcc_generated_files/pin_manager.h"
+# 196 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -19627,11 +19627,334 @@ char *ctermid(char *);
 char *tempnam(const char *, const char *);
 # 7 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 2 3
 # 54 "mcc_generated_files/mcc.h" 2
-# 69 "mcc_generated_files/mcc.h"
+
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 55 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/tmr2.h" 1
+# 79 "mcc_generated_files/tmr2.h"
+typedef enum
+{
+# 89 "mcc_generated_files/tmr2.h"
+   TMR2_ROP_STARTS_TMRON,
+
+
+
+
+   TMR2_ROP_STARTS_TMRON_ERSHIGH,
+
+
+
+
+   TMR2_ROP_STARTS_TMRON_ERSLOW,
+
+
+
+
+   TMR2_ROP_RESETS_ERSBOTHEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSRISINGEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSFALLINGEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSLOW,
+
+
+
+
+   TMR2_ROP_RESETS_ERSHIGH,
+# 135 "mcc_generated_files/tmr2.h"
+   TMR2_OS_STARTS_TMRON,
+
+
+
+
+   TMR2_OS_STARTS_ERSRISINGEDGE ,
+
+
+
+
+   TMR2_OS_STARTS_ERSFALLINGEDGE ,
+
+
+
+
+   TMR2_OS_STARTS_ERSBOTHEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
+
+
+
+
+   TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+
+
+
+   TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+
+
+
+   TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
+# 192 "mcc_generated_files/tmr2.h"
+   TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+
+
+
+   TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+
+
+
+
+   TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR2_HLT_MODE;
+# 220 "mcc_generated_files/tmr2.h"
+typedef enum
+{
+
+
+    TMR2_T2INPPS,
+
+
+
+    TMR2_RESERVED,
+
+
+
+    TMR2_T4POSTSCALED,
+
+
+
+    TMR2_T6POSTSCALED,
+
+
+
+    TMR2_T8POSTSCALED,
+
+
+    TMR2_CCP1_OUT,
+
+
+
+    TMR2_CCP2_OUT,
+
+
+
+    TMR2_CCP7_OUT,
+
+
+
+    TMR2_RESERVED_1,
+
+
+
+    TMR2_PWM3_OUT,
+
+
+
+    TMR2_PWM4_OUT,
+
+
+
+    TMR2_PWM9_OUT,
+
+
+
+    TMR2_RESERVED_2,
+
+
+
+    TMR2_PWM5_OUT,
+
+
+
+    TMR2_PWM6_OUT,
+
+
+
+    TMR2_PWM11_OUT,
+
+
+
+    TMR2_RESERVED_3,
+
+
+
+    TMR2_C1_OUT_SYNC,
+
+
+
+    TMR2_C2_OUT_SYNC,
+
+
+
+    TMR2_C3_OUT_SYNC,
+
+
+
+    TMR2_C4_OUT_SYNC,
+
+
+
+    TMR2_C5_OUT_SYNC,
+
+
+
+    TMR2_C6_OUT_SYNC,
+
+
+
+    TMR2_RESERVED_4,
+
+
+
+    TMR2_RESERVED_5,
+
+
+
+    TMR2_ZCD_OUTPUT,
+
+
+
+    TMR2_CLC1_OUT,
+
+
+
+    TMR2_CLC2_OUT,
+
+
+
+    TMR2_CLC3_OUT,
+
+
+
+    TMR2_CLC4_OUT
+
+
+} TMR2_HLT_EXT_RESET_SOURCE;
+# 384 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 420 "mcc_generated_files/tmr2.h"
+void TMR2_ModeSet(TMR2_HLT_MODE mode);
+# 455 "mcc_generated_files/tmr2.h"
+void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
+# 484 "mcc_generated_files/tmr2.h"
+void TMR2_Start(void);
+# 513 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 545 "mcc_generated_files/tmr2.h"
+void TMR2_Stop(void);
+# 577 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 612 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_Counter8BitGet(void);
+# 647 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 686 "mcc_generated_files/tmr2.h"
+void TMR2_Counter8BitSet(uint8_t timerVal);
+# 725 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 777 "mcc_generated_files/tmr2.h"
+void TMR2_Period8BitSet(uint8_t periodVal);
+# 829 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 847 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 865 "mcc_generated_files/tmr2.h"
+ void TMR2_CallBack(void);
+# 882 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 900 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 918 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/adc.h" 1
+# 72 "mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "mcc_generated_files/adc.h"
+typedef enum
+{
+    AN0 = 0x0,
+    channel_Switched_AN1 = 0x21,
+    channel_Switched_AN10 = 0x2A,
+    channel_Switched_AN18 = 0x32,
+    channel_DAC7_Output = 0x37,
+    channel_DAC5_Output = 0x39,
+    channel_DAC4_Output = 0x3A,
+    channel_DAC3_Output = 0x3B,
+    channel_DAC2_Output = 0x3C,
+    channel_Temp = 0x3D,
+    channel_DAC1_Output = 0x3E,
+    channel_FVRBuffer1 = 0x3F
+} adc_channel_t;
+# 144 "mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 174 "mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 201 "mcc_generated_files/adc.h"
+void ADC_StartConversion(void);
+# 233 "mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone(void);
+# 266 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 296 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 324 "mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 340 "mcc_generated_files/adc.h"
+void ADC_ISR(void);
+# 358 "mcc_generated_files/adc.h"
+ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
+# 376 "mcc_generated_files/adc.h"
+extern void (*ADC_InterruptHandler)(void);
+# 394 "mcc_generated_files/adc.h"
+void ADC_DefaultInterruptHandler(void);
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 82 "mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 94 "mcc_generated_files/mcc.h"
+# 97 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -19643,6 +19966,8 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    TMR2_Initialize();
+    ADC_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

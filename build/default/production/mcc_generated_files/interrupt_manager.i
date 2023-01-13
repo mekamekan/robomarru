@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/interrupt_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/interrupt_manager.c" 2
+# 49 "mcc_generated_files/interrupt_manager.c"
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 49 "mcc_generated_files/interrupt_manager.c" 2
+
+# 1 "mcc_generated_files/mcc.h" 1
+# 49 "mcc_generated_files/mcc.h"
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -19458,21 +19461,21 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 49 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
+# 1 "mcc_generated_files/device_config.h" 1
+# 50 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 184 "./mcc_generated_files/pin_manager.h"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 184 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 196 "./mcc_generated_files/pin_manager.h"
+# 196 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/mcc.h" 2
 
 
 # 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
+# 53 "mcc_generated_files/mcc.h" 2
 
 # 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 1 3
 
@@ -19626,16 +19629,14 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 7 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
+# 54 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 79 "./mcc_generated_files/tmr2.h"
+# 1 "mcc_generated_files/tmr2.h" 1
+# 79 "mcc_generated_files/tmr2.h"
 typedef enum
 {
-# 89 "./mcc_generated_files/tmr2.h"
+# 89 "mcc_generated_files/tmr2.h"
    TMR2_ROP_STARTS_TMRON,
 
 
@@ -19672,7 +19673,7 @@ typedef enum
 
 
    TMR2_ROP_RESETS_ERSHIGH,
-# 135 "./mcc_generated_files/tmr2.h"
+# 135 "mcc_generated_files/tmr2.h"
    TMR2_OS_STARTS_TMRON,
 
 
@@ -19722,7 +19723,7 @@ typedef enum
 
 
    TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
-# 192 "./mcc_generated_files/tmr2.h"
+# 192 "mcc_generated_files/tmr2.h"
    TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
 
 
@@ -19737,7 +19738,7 @@ typedef enum
    TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
 
 } TMR2_HLT_MODE;
-# 220 "./mcc_generated_files/tmr2.h"
+# 220 "mcc_generated_files/tmr2.h"
 typedef enum
 {
 
@@ -19861,46 +19862,46 @@ typedef enum
 
 
 } TMR2_HLT_EXT_RESET_SOURCE;
-# 384 "./mcc_generated_files/tmr2.h"
+# 384 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 420 "./mcc_generated_files/tmr2.h"
+# 420 "mcc_generated_files/tmr2.h"
 void TMR2_ModeSet(TMR2_HLT_MODE mode);
-# 455 "./mcc_generated_files/tmr2.h"
+# 455 "mcc_generated_files/tmr2.h"
 void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
-# 484 "./mcc_generated_files/tmr2.h"
+# 484 "mcc_generated_files/tmr2.h"
 void TMR2_Start(void);
-# 513 "./mcc_generated_files/tmr2.h"
+# 513 "mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 545 "./mcc_generated_files/tmr2.h"
+# 545 "mcc_generated_files/tmr2.h"
 void TMR2_Stop(void);
-# 577 "./mcc_generated_files/tmr2.h"
+# 577 "mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 612 "./mcc_generated_files/tmr2.h"
+# 612 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_Counter8BitGet(void);
-# 647 "./mcc_generated_files/tmr2.h"
+# 647 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 686 "./mcc_generated_files/tmr2.h"
+# 686 "mcc_generated_files/tmr2.h"
 void TMR2_Counter8BitSet(uint8_t timerVal);
-# 725 "./mcc_generated_files/tmr2.h"
+# 725 "mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 777 "./mcc_generated_files/tmr2.h"
+# 777 "mcc_generated_files/tmr2.h"
 void TMR2_Period8BitSet(uint8_t periodVal);
-# 829 "./mcc_generated_files/tmr2.h"
+# 829 "mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 847 "./mcc_generated_files/tmr2.h"
+# 847 "mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 865 "./mcc_generated_files/tmr2.h"
+# 865 "mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 882 "./mcc_generated_files/tmr2.h"
+# 882 "mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 900 "./mcc_generated_files/tmr2.h"
+# 900 "mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 918 "./mcc_generated_files/tmr2.h"
+# 918 "mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
+# 1 "mcc_generated_files/adc.h" 1
+# 72 "mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
 
 
@@ -19911,7 +19912,7 @@ typedef struct
     adc_result_t adcResult1;
     adc_result_t adcResult2;
 } adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
+# 95 "mcc_generated_files/adc.h"
 typedef enum
 {
     AN0 = 0x0,
@@ -19927,110 +19928,58 @@ typedef enum
     channel_DAC1_Output = 0x3E,
     channel_FVRBuffer1 = 0x3F
 } adc_channel_t;
-# 144 "./mcc_generated_files/adc.h"
+# 144 "mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 174 "./mcc_generated_files/adc.h"
+# 174 "mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 201 "./mcc_generated_files/adc.h"
+# 201 "mcc_generated_files/adc.h"
 void ADC_StartConversion(void);
-# 233 "./mcc_generated_files/adc.h"
+# 233 "mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone(void);
-# 266 "./mcc_generated_files/adc.h"
+# 266 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 296 "./mcc_generated_files/adc.h"
+# 296 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 324 "./mcc_generated_files/adc.h"
+# 324 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 340 "./mcc_generated_files/adc.h"
+# 340 "mcc_generated_files/adc.h"
 void ADC_ISR(void);
-# 358 "./mcc_generated_files/adc.h"
+# 358 "mcc_generated_files/adc.h"
  void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-# 376 "./mcc_generated_files/adc.h"
+# 376 "mcc_generated_files/adc.h"
 extern void (*ADC_InterruptHandler)(void);
-# 394 "./mcc_generated_files/adc.h"
+# 394 "mcc_generated_files/adc.h"
 void ADC_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
+# 97 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 44 "main.c" 2
+# 50 "mcc_generated_files/interrupt_manager.c" 2
 
 
-
-
-
-
-int result, Interval;
-uint8_t State, Reverse;
-
-void TMR2_interrupt(void);
-
-
-void main(void)
+void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
 {
 
-    SYSTEM_Initialize();
+    if(INTCONbits.PEIE == 1)
+    {
+        if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+        {
+            ADC_ISR();
+        }
+        else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+        {
+            TMR2_ISR();
+        }
+        else
+        {
 
-
-
-
-
-    (INTCONbits.GIE = 1);
-
-
-    (INTCONbits.PEIE = 1);
-
-
-
-
-
-
-
-    TMR2_SetInterruptHandler(TMR2_interrupt);
-    TMR2_Start();
-    Interval = 100;
-
-    while (1)
+        }
+    }
+    else
     {
 
-        result = ADC_GetConversion(AN0);
-        if(result < 20){
-            result = 20;
-        }
     }
-}
-
-void TMR2_interrupt(void){
-
-    Interval--;
-    if(Interval == 0){
-        Interval = result / 20;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
-        switch(State){
-            case 0:
-                State++;
-                LATC = (Reverse) ? 0x0A : 0x05;
-                break;
-            case 1:
-                State++;
-                LATC = (Reverse) ? 0x09 : 0x09;
-                break;
-            case 2:
-                State++;
-                LATC = (Reverse) ? 0x05 : 0x0A;
-                break;
-            case 3:
-                State = 0;
-                LATC = (Reverse) ? 0x06 : 0x06;
-                break;
-
-            default :
-                break;
-        }
-
-    }
-
 }

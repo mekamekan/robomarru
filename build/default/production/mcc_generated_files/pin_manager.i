@@ -19459,9 +19459,9 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 78 "mcc_generated_files/pin_manager.h"
+# 184 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 90 "mcc_generated_files/pin_manager.h"
+# 196 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -19485,13 +19485,13 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x08;
     TRISA = 0xFF;
     TRISB = 0xFF;
-    TRISC = 0xFF;
+    TRISC = 0xF0;
 
 
 
 
-    ANSELC = 0xFC;
-    ANSELB = 0x3F;
+    ANSELC = 0xF0;
+    ANSELB = 0x2F;
     ANSELA = 0x3F;
 
 
@@ -19523,13 +19523,8 @@ void PIN_MANAGER_Initialize(void)
     INLVLA = 0x3F;
     INLVLB = 0xF0;
     INLVLC = 0xFF;
-
-
-
-
-
-
-
+# 116 "mcc_generated_files/pin_manager.c"
+    ADCACTPPS = 0x0C;
 }
 
 void PIN_MANAGER_IOC(void)

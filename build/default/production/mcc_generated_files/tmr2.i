@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/tmr2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/tmr2.c" 2
+# 51 "mcc_generated_files/tmr2.c"
 # 1 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -19458,184 +19456,16 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/tmr2.c" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 184 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 196 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
-
-
+# 1 "mcc_generated_files/tmr2.h" 1
+# 55 "mcc_generated_files/tmr2.h"
 # 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-# 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 79 "./mcc_generated_files/tmr2.h"
+# 55 "mcc_generated_files/tmr2.h" 2
+# 79 "mcc_generated_files/tmr2.h"
 typedef enum
 {
-# 89 "./mcc_generated_files/tmr2.h"
+# 89 "mcc_generated_files/tmr2.h"
    TMR2_ROP_STARTS_TMRON,
 
 
@@ -19672,7 +19502,7 @@ typedef enum
 
 
    TMR2_ROP_RESETS_ERSHIGH,
-# 135 "./mcc_generated_files/tmr2.h"
+# 135 "mcc_generated_files/tmr2.h"
    TMR2_OS_STARTS_TMRON,
 
 
@@ -19722,7 +19552,7 @@ typedef enum
 
 
    TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
-# 192 "./mcc_generated_files/tmr2.h"
+# 192 "mcc_generated_files/tmr2.h"
    TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
 
 
@@ -19737,7 +19567,7 @@ typedef enum
    TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
 
 } TMR2_HLT_MODE;
-# 220 "./mcc_generated_files/tmr2.h"
+# 220 "mcc_generated_files/tmr2.h"
 typedef enum
 {
 
@@ -19861,176 +19691,182 @@ typedef enum
 
 
 } TMR2_HLT_EXT_RESET_SOURCE;
-# 384 "./mcc_generated_files/tmr2.h"
+# 384 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 420 "./mcc_generated_files/tmr2.h"
+# 420 "mcc_generated_files/tmr2.h"
 void TMR2_ModeSet(TMR2_HLT_MODE mode);
-# 455 "./mcc_generated_files/tmr2.h"
+# 455 "mcc_generated_files/tmr2.h"
 void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
-# 484 "./mcc_generated_files/tmr2.h"
+# 484 "mcc_generated_files/tmr2.h"
 void TMR2_Start(void);
-# 513 "./mcc_generated_files/tmr2.h"
+# 513 "mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 545 "./mcc_generated_files/tmr2.h"
+# 545 "mcc_generated_files/tmr2.h"
 void TMR2_Stop(void);
-# 577 "./mcc_generated_files/tmr2.h"
+# 577 "mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 612 "./mcc_generated_files/tmr2.h"
+# 612 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_Counter8BitGet(void);
-# 647 "./mcc_generated_files/tmr2.h"
+# 647 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 686 "./mcc_generated_files/tmr2.h"
+# 686 "mcc_generated_files/tmr2.h"
 void TMR2_Counter8BitSet(uint8_t timerVal);
-# 725 "./mcc_generated_files/tmr2.h"
+# 725 "mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 777 "./mcc_generated_files/tmr2.h"
+# 777 "mcc_generated_files/tmr2.h"
 void TMR2_Period8BitSet(uint8_t periodVal);
-# 829 "./mcc_generated_files/tmr2.h"
+# 829 "mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 847 "./mcc_generated_files/tmr2.h"
+# 847 "mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 865 "./mcc_generated_files/tmr2.h"
+# 865 "mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 882 "./mcc_generated_files/tmr2.h"
+# 882 "mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 900 "./mcc_generated_files/tmr2.h"
+# 900 "mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 918 "./mcc_generated_files/tmr2.h"
+# 918 "mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
-
-
-
-
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
-typedef enum
-{
-    AN0 = 0x0,
-    channel_Switched_AN1 = 0x21,
-    channel_Switched_AN10 = 0x2A,
-    channel_Switched_AN18 = 0x32,
-    channel_DAC7_Output = 0x37,
-    channel_DAC5_Output = 0x39,
-    channel_DAC4_Output = 0x3A,
-    channel_DAC3_Output = 0x3B,
-    channel_DAC2_Output = 0x3C,
-    channel_Temp = 0x3D,
-    channel_DAC1_Output = 0x3E,
-    channel_FVRBuffer1 = 0x3F
-} adc_channel_t;
-# 144 "./mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 174 "./mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 201 "./mcc_generated_files/adc.h"
-void ADC_StartConversion(void);
-# 233 "./mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone(void);
-# 266 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 296 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 324 "./mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 340 "./mcc_generated_files/adc.h"
-void ADC_ISR(void);
-# 358 "./mcc_generated_files/adc.h"
- void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-# 376 "./mcc_generated_files/adc.h"
-extern void (*ADC_InterruptHandler)(void);
-# 394 "./mcc_generated_files/adc.h"
-void ADC_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 44 "main.c" 2
+# 52 "mcc_generated_files/tmr2.c" 2
 
 
 
 
 
 
-int result, Interval;
-uint8_t State, Reverse;
-
-void TMR2_interrupt(void);
+void (*TMR2_InterruptHandler)(void);
 
 
-void main(void)
+
+
+
+void TMR2_Initialize(void)
 {
 
-    SYSTEM_Initialize();
 
 
+    T2CLKCON = 0x04;
 
 
-
-    (INTCONbits.GIE = 1);
-
-
-    (INTCONbits.PEIE = 1);
+    T2HLT = 0x00;
 
 
+    T2RST = 0x00;
 
 
+    T2PR = 0x26;
 
 
+    T2TMR = 0x00;
 
-    TMR2_SetInterruptHandler(TMR2_interrupt);
+
+    PIR1bits.TMR2IF = 0;
+
+
+    PIE1bits.TMR2IE = 1;
+
+
+    TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
+
+
+    T2CON = 0xB0;
+}
+
+void TMR2_ModeSet(TMR2_HLT_MODE mode)
+{
+
+    T2HLTbits.MODE = mode;
+}
+
+void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset)
+{
+
+    T2RSTbits.RSEL = reset;
+}
+
+void TMR2_Start(void)
+{
+
+    T2CONbits.TMR2ON = 1;
+}
+
+void TMR2_StartTimer(void)
+{
     TMR2_Start();
-    Interval = 100;
+}
 
-    while (1)
+void TMR2_Stop(void)
+{
+
+    T2CONbits.TMR2ON = 0;
+}
+
+void TMR2_StopTimer(void)
+{
+    TMR2_Stop();
+}
+
+uint8_t TMR2_Counter8BitGet(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR2;
+
+    return readVal;
+}
+
+uint8_t TMR2_ReadTimer(void)
+{
+    return TMR2_Counter8BitGet();
+}
+
+void TMR2_Counter8BitSet(uint8_t timerVal)
+{
+
+    TMR2 = timerVal;
+}
+
+void TMR2_WriteTimer(uint8_t timerVal)
+{
+    TMR2_Counter8BitSet(timerVal);
+}
+
+void TMR2_Period8BitSet(uint8_t periodVal)
+{
+   PR2 = periodVal;
+}
+
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
+{
+   TMR2_Period8BitSet(periodVal);
+}
+
+void TMR2_ISR(void)
+{
+
+
+    PIR1bits.TMR2IF = 0;
+
+
+
+    TMR2_CallBack();
+}
+
+void TMR2_CallBack(void)
+{
+
+
+    if(TMR2_InterruptHandler)
     {
-
-        result = ADC_GetConversion(AN0);
-        if(result < 20){
-            result = 20;
-        }
+        TMR2_InterruptHandler();
     }
 }
 
-void TMR2_interrupt(void){
+void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    TMR2_InterruptHandler = InterruptHandler;
+}
 
-    Interval--;
-    if(Interval == 0){
-        Interval = result / 20;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
-        switch(State){
-            case 0:
-                State++;
-                LATC = (Reverse) ? 0x0A : 0x05;
-                break;
-            case 1:
-                State++;
-                LATC = (Reverse) ? 0x09 : 0x09;
-                break;
-            case 2:
-                State++;
-                LATC = (Reverse) ? 0x05 : 0x0A;
-                break;
-            case 3:
-                State = 0;
-                LATC = (Reverse) ? 0x06 : 0x06;
-                break;
+void TMR2_DefaultInterruptHandler(void){
 
-            default :
-                break;
-        }
-
-    }
 
 }

@@ -1,37 +1,57 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"184 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 184: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"85 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 85: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"97
-[; ;mcc_generated_files/mcc.h: 97: void WDT_Initialize(void);
-[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"384 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 384: void TMR2_Initialize(void);
-[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
-"144 mcc_generated_files/adc.h
-[; ;mcc_generated_files/adc.h: 144: void ADC_Initialize(void);
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"2411 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 2411: extern volatile unsigned char OSCCON __attribute__((address(0x09B)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@155 ]
-"2483
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 2483: extern volatile unsigned char OSCSTAT __attribute__((address(0x09C)));
-[v _OSCSTAT `Vuc ~T0 @X0 0 e@156 ]
-"2353
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 2353: extern volatile unsigned char OSCTUNE __attribute__((address(0x09A)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@154 ]
-"2545
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 2545: extern volatile unsigned char BORCON __attribute__((address(0x09D)));
-[v _BORCON `Vuc ~T0 @X0 0 e@157 ]
-"41906
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 41906: extern volatile __bit PLLR __attribute__((address(0x4E6)));
-[v _PLLR `Vb ~T0 @X0 0 e@1254 ]
-"2294
-[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 2294: extern volatile unsigned char WDTCON __attribute__((address(0x099)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@153 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"358 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 358:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"368
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 368:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"357
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 357: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"375
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"1849
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 1849:     struct {
+[s S93 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S93 . TMR1IE TMR2IE CCP1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
+"1859
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 1859:     struct {
+[s S94 :2 `uc 1 :1 `uc 1 ]
+[n S94 . . CCPIE ]
+"1848
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 1848: typedef union {
+[u S92 `S93 1 `S94 1 ]
+[n S92 . . . ]
+"1864
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 1864: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
+[v _PIE1bits `VS92 ~T0 @X0 0 e@145 ]
+"643
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 643:     struct {
+[s S42 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S42 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"653
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 653:     struct {
+[s S43 :2 `uc 1 :1 `uc 1 ]
+[n S43 . . CCPIF ]
+"642
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 642: typedef union {
+[u S41 `S42 1 `S43 1 ]
+[n S41 . . . ]
+"658
+[; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 658: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS41 ~T0 @X0 0 e@17 ]
+"340 mcc_generated_files/adc.h
+[; ;mcc_generated_files/adc.h: 340: void ADC_ISR(void);
+[v _ADC_ISR `(v ~T0 @X0 0 ef ]
+"847 mcc_generated_files/tmr2.h
+[; ;mcc_generated_files/tmr2.h: 847: void TMR2_ISR(void);
+[v _TMR2_ISR `(v ~T0 @X0 0 ef ]
 "55 D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1718,84 +1738,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37714
 [; ;D:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1778.h: 37714: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"50 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"51
-[; ;mcc_generated_files/mcc.c: 51: {
-{
-[e :U _SYSTEM_Initialize ]
-[f ]
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
+"52 mcc_generated_files/interrupt_manager.c
+[; ;mcc_generated_files/interrupt_manager.c: 52: void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
+[v _INTERRUPT_InterruptManager `(v ~T1 @X0 1 ef ]
 "53
-[; ;mcc_generated_files/mcc.c: 53:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"54
-[; ;mcc_generated_files/mcc.c: 54:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
-"55
-[; ;mcc_generated_files/mcc.c: 55:     WDT_Initialize();
-[e ( _WDT_Initialize ..  ]
-"56
-[; ;mcc_generated_files/mcc.c: 56:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
-"57
-[; ;mcc_generated_files/mcc.c: 57:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
-"58
-[; ;mcc_generated_files/mcc.c: 58: }
-[e :UE 1731 ]
-}
-"60
-[; ;mcc_generated_files/mcc.c: 60: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"61
-[; ;mcc_generated_files/mcc.c: 61: {
+[; ;mcc_generated_files/interrupt_manager.c: 53: {
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _INTERRUPT_InterruptManager ]
 [f ]
+"55
+[; ;mcc_generated_files/interrupt_manager.c: 55:     if(INTCONbits.PEIE == 1)
+[e $ ! == -> . . _INTCONbits 0 6 `i -> 1 `i 1732  ]
+"56
+[; ;mcc_generated_files/interrupt_manager.c: 56:     {
+{
+"57
+[; ;mcc_generated_files/interrupt_manager.c: 57:         if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+[e $ ! && == -> . . _PIE1bits 0 6 `i -> 1 `i == -> . . _PIR1bits 0 6 `i -> 1 `i 1733  ]
+"58
+[; ;mcc_generated_files/interrupt_manager.c: 58:         {
+{
+"59
+[; ;mcc_generated_files/interrupt_manager.c: 59:             ADC_ISR();
+[e ( _ADC_ISR ..  ]
+"60
+[; ;mcc_generated_files/interrupt_manager.c: 60:         }
+}
+[e $U 1734  ]
+"61
+[; ;mcc_generated_files/interrupt_manager.c: 61:         else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+[e :U 1733 ]
+[e $ ! && == -> . . _PIE1bits 0 1 `i -> 1 `i == -> . . _PIR1bits 0 1 `i -> 1 `i 1735  ]
+"62
+[; ;mcc_generated_files/interrupt_manager.c: 62:         {
+{
 "63
-[; ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x70;
-[e = _OSCCON -> -> 112 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 63:             TMR2_ISR();
+[e ( _TMR2_ISR ..  ]
+"64
+[; ;mcc_generated_files/interrupt_manager.c: 64:         }
+}
+[e $U 1736  ]
 "65
-[; ;mcc_generated_files/mcc.c: 65:     OSCSTAT = 0x80;
-[e = _OSCSTAT -> -> 128 `i `uc ]
-"67
-[; ;mcc_generated_files/mcc.c: 67:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"69
-[; ;mcc_generated_files/mcc.c: 69:     BORCON = 0x00;
-[e = _BORCON -> -> 0 `i `uc ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     while(PLLR == 0)
-[e $U 1733  ]
+[; ;mcc_generated_files/interrupt_manager.c: 65:         else
+[e :U 1735 ]
+"66
+[; ;mcc_generated_files/interrupt_manager.c: 66:         {
+{
+"68
+[; ;mcc_generated_files/interrupt_manager.c: 68:         }
+}
+[e :U 1736 ]
 [e :U 1734 ]
-"72
-[; ;mcc_generated_files/mcc.c: 72:     {
+"69
+[; ;mcc_generated_files/interrupt_manager.c: 69:     }
+}
+[e $U 1737  ]
+"70
+[; ;mcc_generated_files/interrupt_manager.c: 70:     else
+[e :U 1732 ]
+"71
+[; ;mcc_generated_files/interrupt_manager.c: 71:     {
 {
 "73
-[; ;mcc_generated_files/mcc.c: 73:     }
+[; ;mcc_generated_files/interrupt_manager.c: 73:     }
 }
-[e :U 1733 ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     while(PLLR == 0)
-[e $ == -> _PLLR `i -> 0 `i 1734  ]
-[e :U 1735 ]
+[e :U 1737 ]
 "74
-[; ;mcc_generated_files/mcc.c: 74: }
-[e :UE 1732 ]
-}
-"76
-[; ;mcc_generated_files/mcc.c: 76: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
-"77
-[; ;mcc_generated_files/mcc.c: 77: {
-{
-[e :U _WDT_Initialize ]
-[f ]
-"79
-[; ;mcc_generated_files/mcc.c: 79:     WDTCON = 0x16;
-[e = _WDTCON -> -> 22 `i `uc ]
-"80
-[; ;mcc_generated_files/mcc.c: 80: }
-[e :UE 1736 ]
+[; ;mcc_generated_files/interrupt_manager.c: 74: }
+[e :UE 1731 ]
 }
